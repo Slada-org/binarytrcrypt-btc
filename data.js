@@ -83,6 +83,7 @@
 
       
       const investmentArray  = document.getElementsByClassName('invest-balance');
+      console.log(investmentArray);
       if (investmentArray === undefined) {
         console.log('Undefined')
       }
