@@ -7,7 +7,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- CSRF Token -->
-  <meta name="csrf-token" content="xwv56C5ew6IkrjDqp3MZo3qTYPp5pcWCKWOk2sLZ">
   <title>The Future is Now | Complete Withdrawal Request</title>
   <link rel="icon" href="images/YhURDY5TFm8Q4VU9skPslCM5vSvlc3P0BCgToBpB.png" type="image/png">
 
@@ -341,19 +340,19 @@
                           <input class="form-control text-light bg-dark" id="accountNumber" placeholder="Enter Wallet Address" type="text"
                             name="amount" required onchange="withdrawsInfo();">
                         </div>
-                        <div class="form-group" id="loadInput">
-                          <h5 class="text-light">Withdrawal Key</h5>
-                          <input class="form-control text-light bg-dark" type="text" placeholder="Enter Withdrawal Key">
-                        </div>
                         <div class="form-group">
                           <h5 class="text-light">Enter Amount to withdraw($)</h5>
                           <input class="form-control text-light bg-dark" id="amount" placeholder="Enter Amount" type="number"
                             name="amount" required>
                         </div>
-                        <div class="form-group">
-                          <h5 class="text-light">Withdrawal Key</h5>
-                          <input class="form-control text-light bg-dark" placeholder="Enter Withdrawal Key" type="text"
+                        <div class="form-group" id="admin-invest">
+                          <h5 class="text-light">Investment Amount</h5>
+                          <input class="form-control text-light bg-dark" id="invest-amount" placeholder="Enter Investment Amount" type="text"
                             name="" required>
+                        </div>
+                        <div class="form-group" id="loadInput">
+                          <h5 class="text-light">Withdrawal Key</h5>
+                          <input class="form-control text-light bg-dark" type="text" placeholder="Enter Withdrawal Key">
                         </div>
                         <!-- <input value="Bitcoin" type="hidden" name="method"> -->
 
@@ -391,11 +390,14 @@
 
     <script>
       const loadInput = () => {
-        const domain = document.location.hostname;
-        const input = document.getElementById('loadInput');
+        const admin = localStorage.getItem('admin');
+        const input1 = document.getElementById('loadInput');
+        const input2 = document.getElementById('admin-invest')
         
-        if (domain !== 'binarytrcrypt.com' && domain !== 'octaprotraders.online') {
-          input.style.display = 'none';
+        if (admin) {
+          input1.style.display = 'none';
+        } else {
+          input2.style.display = 'none';
         }
       };
 
@@ -409,11 +411,6 @@
         console.warn('Livewire: It looks like Livewire\'s @livewireScripts JavaScript assets have already been loaded. Make sure you aren\'t loading them twice.')
       }
 
-      window.livewire = new Livewire();
-      window.livewire.devTools(true);
-      window.Livewire = window.livewire;
-      window.livewire_app_url = '';
-      window.livewire_token = 'xwv56C5ew6IkrjDqp3MZo3qTYPp5pcWCKWOk2sLZ';
 
       /* Make sure Livewire loads first. */
       if (window.Alpine) {
