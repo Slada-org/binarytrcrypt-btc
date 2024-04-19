@@ -88,6 +88,8 @@
         console.log('Undefined')
       }
 
+      console.log(investmentBalance);
+
       for (let i = 0; i < investmentArray.length; i++) {
         investmentArray1[i].textContent = `$ ${investmentBalance.toLocaleString('en-US')}`;
         
