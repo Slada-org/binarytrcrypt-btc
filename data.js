@@ -80,6 +80,18 @@
       // accountBalArray2.forEach((e) => {
       //   e.textContent = `$ ${accountBalance.toLocaleString('en-US')}`
       // });
+
+      
+      const investmentArray  = document.getElementsByClassName('invest-balance');
+      if (investmentArray === undefined) {
+        console.log('Undefined')
+      }
+
+      for (let i = 0; i < investmentArray.length; i++) {
+        investmentArray1[i].textContent = `$ ${investmentBalance.toLocaleString('en-US')}`;
+        
+      }
+      
       const nameArray  = document.getElementsByClassName('accountName');
       // console.log(nameArray);
 
