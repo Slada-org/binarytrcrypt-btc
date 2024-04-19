@@ -83,20 +83,17 @@
 
       
       const investmentArray  = document.getElementsByClassName('invest-balance');
-      console.log(investmentArray);
-      // if (investmentArray === undefined) {
-      //   console.log('Undefined')
-      // }
 
-      console.log(investmentBalance);
+      if (investmentArray === undefined) {
+        console.log('Undefined')
+      }
 
       for (let i = 0; i < investmentArray.length; i++) {
-        investmentArray1[i].textContent = `$ ${investmentBalance.toLocaleString('en-US')}`;
+        investmentArray[i].textContent = `$ ${investmentBalance.toLocaleString('en-US')}`;
         
       }
       
       const nameArray  = document.getElementsByClassName('accountName');
-      // console.log(nameArray);
 
       if (nameArray === undefined) {
         console.log('Undefined')
