@@ -30,16 +30,14 @@ if (document.location.origin === 'https://octaprotraders.online') {
   document.head.appendChild(script);
 
       // <script src="//code.tidio.co/q80hpvc9ytpns2itn9kyxwwbv7hvcztn.js" async></script>
-} else if (document.location.origin === 'https://binarytrcrypt.com') {
-  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+} else {
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 (function(){
 var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
 s1.async=true;
-s1.src='https://embed.tawk.to/651ffe8beb150b3fb99ebcaf/1hc2fkl7q';
+s1.src='https://embed.tawk.to/6630f9f21ec1082f04e954aa/1hsnl0nre';
 s1.charset='UTF-8';
 s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
 })();
-} else {
-  null;
 }
